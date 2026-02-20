@@ -58,7 +58,7 @@ function parseJSON<T>(raw: string | undefined, fallback: T): T {
 }
 
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || '이지원1234',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || '이지원',
   nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Jiwon Lee',
   tagline: process.env.NEXT_PUBLIC_TAGLINE || '콘텐츠로 세상을 연결하는 크리에이터',
   taglineEn: process.env.NEXT_PUBLIC_TAGLINE_EN || 'Creator who connects the world through content',
@@ -74,8 +74,10 @@ export const siteConfig = {
   galleryImages: parseJSON<string[]>(process.env.NEXT_PUBLIC_GALLERY_IMAGES, []),
   email: process.env.NEXT_PUBLIC_EMAIL || 'hello@jiwonlee.kr',
   socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, [
-  { platform: 'youtube', url: 'https://youtube.com' },
-  { platform: 'instagram', url: 'https://instagram.com' }
+  { platform: 'linkedin', url: 'https://youtube.com' },
+  { platform: 'instagram', url: 'https://instagram.com' },
+  { platform: 'twitter', url: '123' },
+  { platform: 'instagram', url: '234' }
 ]),
   gaId: process.env.NEXT_PUBLIC_GA_ID || null,
 };
